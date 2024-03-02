@@ -1,0 +1,21 @@
+<main class="main bg-gradient-to-b">
+  <div class="content flex flex-col justify-center items-center mt-[30px]">
+    <div class="flex flex-row">
+      <input type="text" class="p-[10px] rounded-lg outline-none bg-white w-[610px]" [(ngModel)]="todo" />
+      <button type="" class="bg-blue-800 p-[10px] rounded-lg text-white" (click)="addTodo()">Add Todo</button>
+    </div>
+    <div class="todos mt-4 bg-white p-4 rounded-lg shadow-md w-[700px] overflow-x-auto">
+      <h2 class="text-blue-800 text-lg font-bold mb-2">Todo List</h2>
+      <ul>
+        <li *ngFor="let item of todos; let i = index" class="mb-3 flex items-center justify-between">
+          <span class="text-gray-800">{{item}}</span>
+          <div class="space-x-2">
+            <i class="material-icons cursor-pointer text-rose-800 text-[30px]" (click)="deleteTodo(i)">delete</i>
+            <i class="material-icons text-blue-900 cursor-pointer text-[30px]" (click)="openEditModal()">edit</i>
+          </div>
+        </li>
+      </ul>
+    </div>
+
+  </div>
+</main>

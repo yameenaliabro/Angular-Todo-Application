@@ -1,0 +1,9 @@
+<div class="fixed top-0 left-0 w-full h-full  flex items-center justify-center bg-gray-500 bg-opacity-50 z-111">
+    <div class="bg-white w-[650px] p-6 rounded-md shadow-md">
+        <input type="text" [(ngModel)]="editedTodo" class="p-2 border rounded-md mb-4 w-full outline" />
+        <div class="flex justify-end">
+            <button class="bg-blue-500 text-white px-4 py-2 rounded-md mr-2" (click)="saveEdit()">Save</button>
+            <button class="bg-gray-300 text-gray-800 px-4 py-2 rounded-md" (click)="closeModal()">Close</button>
+        </div>
+    </div>
+</div>
